@@ -16,7 +16,7 @@ def count_words(text):
 
     return total + 1
 
-def count_sentences(text):#its okay  cümle kelime harf
+def count_sentences(text):
     count = 0
     for i in range(0,len(text)):
         if text[i] in (".","?","!"):
