@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--[href links] BasicRules & Dungeon Mastering & CharacterCreation  -->
+<!-- https://dnd.wizards.com/what-is-dnd/basics-play -->
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/dnd-fav.png">
+    <title>
+        Character Creation | D&D
+    </title>
+    <script>
+        function rollDice(clicked_id) {
+            var die1 = document.getElementById(clicked_id);
+
+            var d1 = Math.floor(Math.random() * 6) + 1;
+            var d2 = Math.floor(Math.random() * 6) + 1;
+            var d3 = Math.floor(Math.random() * 6) + 1;
+            var d4 = Math.floor(Math.random() * 6) + 1;
+
+            const arr = [d1, d2, d3, d4];
+            var min = arr[0];
+            var total = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                total += arr[i];
+                if (min > arr[i]) {
+                    min = arr[i];
+                }
+            }
+            clicked_id.innerHTML = (total - min);
+        }
+    </script>
+</head>
+
+<body style="background-color: #b04848">
+    <div class="header">
+        <h1>&#128221 Character Creation &#128221</h1>
+        <h4>Ready to learn more about creating your own adventurer?</h4>
+    </div>
+    <div class="topnav">
+        <a
+            href="https://cheesyfrappe-code50-80858788-jj4pvjrqvfjp56-8080.githubpreview.dev/homepage/index.html">Home</a>
+        <a
+            href="https://cheesyfrappe-code50-80858788-jj4pvjrqvfjp56-8080.githubpreview.dev/homepage/basic-rules.html#home">Basic
+            Rules</a>
+        <a
+            href="https://cheesyfrappe-code50-80858788-jj4pvjrqvfjp56-8080.githubpreview.dev/homepage/dungeon-master.html">DM's
+            Guide</a>
+        <a class="active"
+            href="https://cheesyfrappe-code50-80858788-jj4pvjrqvfjp56-8080.githubpreview.dev/homepage/character-create.html">Character
+            Creation</a>
+    </div>
+    <img src="images/dnd-ruins3.jpg" class="center">
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Your first step in playing an adventurer in the Dungeons & Dragons game is to imagine and create a character of
+        your own. Your character is a combination of game statistics, roleplaying hooks, and your imagination. You
+        choose a race (such as human or halfling) and a class (such as fighter or wizard). You also invent the
+        personality, appearance, and backstory of your character. Once completed, your character serves as your
+        representative in the game, your avatar in the Dungeons & Dragons world.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Once you have a character in mind, follow these steps in order, making decisions that reflect the character you
+        want. Your conception of your character might evolve with each choice you make. What’s important is that you
+        come to the table with a character you’re excited to play.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Throughout this section, we use the term character sheet to mean whatever you use to track your character,
+        whether it’s a formal character sheet (like the one at the end of these rules), some form of digital record, or
+        a piece of notebook paper. An official D&D character sheet is a fine place to start until you know what
+        information you need and how you use it during the game.
+    </h5>
+    <br>
+    <h3 style="margin-left: 200px;  font-weight: bold;">1. Choose a Race</h3>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Every character belongs to a race, one of the many intelligent humanoid species in the D&D world. The most
+        common player character races are dwarves, elves, halflings, and humans. Some races also have subraces, such as
+        mountain dwarf or wood elf. The Races section provides more information about these races.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        The race you choose contributes to your character’s identity in an important way, by establishing a general
+        appearance and the natural talents gained from culture and ancestry. Your character’s race grants particular
+        racial traits, such as special senses, proficiency with certain weapons or tools, proficiency in one or more
+        skills, or the ability to use minor spells. These traits sometimes dovetail with the capabilities of certain
+        classes (see step 2). For example, the racial traits of lightfoot halflings make them exceptional rogues, and
+        high elves tend to be powerful wizards. Sometimes playing against type can be fun, too. Halfling paladins and
+        mountain dwarf wizards, for example, can be unusual but memorable characters.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Your race also increases one or more of your ability scores, which you determine in step 3. Note these increases
+        and remember to apply them later.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Record the traits granted by your race on your character sheet. Be sure to note your starting languages and your
+        base speed as well.
+    </h5>
+    <br>
+    <h3 style="margin-left: 200px;  font-weight: bold;">2. Choose a Class</h3>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Every adventurer is a member of a class. Class broadly describes a character’s vocation, what special talents he
+        or
+        she possesses, and the tactics he or she is most likely to employ when exploring a dungeon, fighting monsters,
+        or
+        engaging in a tense negotiation. The character classes are described in the Classes section.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Your character receives a number of benefits from your choice of class. Many of these benefits are class
+        features — capabilities (including spellcasting) that set your character apart from members of other classes.
+        You also gain a number of proficiencies: armor, weapons, skills, saving throws, and sometimes tools. Your
+        proficiencies define many of the things your character can do particularly well, from using certain weapons to
+        telling a convincing lie.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        On your character sheet, record all the features that your class gives you at 1st level.
+    </h5>
+    <br>
+    <h3 style="margin-left: 200px;  font-weight: bold;">3. Determine Ability Scores</h3>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Much of what your character does in the game depends on his or her six abilities: <b>Strength</b>,
+        <b>Dexterity</b>,
+        <b>Constitution</b>, <b>Intelligence</b>, <b>Wisdom</b>, and <b>Charisma</b>. Each ability has a score, which is
+        a number you record on your
+        character sheet.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        The Ability Score Summary table provides a quick reference for what qualities are measured by each ability, what
+        races increases which abilities, and what classes consider each ability particularly important.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        You generate your character’s six <b>ability scores</b> randomly. Roll four 6-sided dice and record the total of
+        the
+        highest three dice on a piece of scratch paper. Do this five more times, so that you have six numbers. If you
+        want to save time or don’t like the idea of randomly determining ability scores, you can use the following
+        scores instead: 15, 14, 13, 12, 10, 8.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Now take your six numbers and write each number beside one of your character’s six abilities to assign scores to
+        Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Afterward, make any changes to your
+        ability scores as a result of your race choice.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        After assigning your ability scores, determine your <b>ability modifiers</b> using the Ability Scores and
+        Modifiers
+        table. To determine an ability modifier without consulting the table, subtract 10 from the ability score and
+        then divide the result by 2 (round down). Write the modifier next to each of your scores.
+    </h5>
+    <br>
+    <h4 style="margin-left: 200px;  font-weight: bold;">3.1-Rolling Ability Scores:</h4>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        There are six ability boxes below. In order to create a character, you can roll six abilities in order. Each one
+        will give
+        you an ability score by rolling randomly four six-sided dice. The highest three will be recorded.
+    </h5>
+    <br>
+    <div>
+        <div id="block_container">
+            <div id="die1" class="dice" style="margin-left: 200px;">0</div>
+            <div id="die2" class="dice" style="margin-left: 210px;">0</div>
+            <div id="die3" class="dice" style="margin-left: 220px;">0</div>
+            <div id="die4" class="dice" style="margin-left: 230px;">0</div>
+            <div id="die5" class="dice" style="margin-left: 240px;">0</div>
+            <div id="die6" class="dice" style="margin-left: 250px;">0</div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <button style="margin-left: 190px;" onclick="rollDice(die1)">Roll STR</button>
+        <button style="margin-left: 190px;" onclick="rollDice(die2)">Roll DEX</button>
+        <button style="margin-left: 190px;" onclick="rollDice(die3)">Roll CON</button>
+        <button style="margin-left: 205px;" onclick="rollDice(die4)">Roll INT</button>
+        <button style="margin-left: 215px;" onclick="rollDice(die5)">Roll WIS</button>
+        <button style="margin-left: 225px;" onclick="rollDice(die6)">Roll CHA</button>
+    </div>
+    <br>
+    <h4 style="margin-left: 200px;  font-weight: bold;">3.2-Ability Score Point Cost:</h4>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        At your Dungeon Master’s option, you can use this variant for determining your ability scores. The method
+        described here allows you to build a character with a set of ability scores you choose individually.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        You have 27 points to spend on your ability scores. The cost of each score is shown on the Ability Score Point
+        Cost table. For example, a score of 14 costs 7 points. Using this method, 15 is the highest ability score you
+        can end up with, before applying racial increases. You can’t have a score lower than 8.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        This method of determining ability scores enables you to create a set of three high numbers and three low ones
+        (15, 15, 15, 8, 8, 8), a set of numbers that are above average and nearly equal (13, 13, 13, 12, 12, 12), or any
+        set of numbers between those extremes.
+    </h5>
+    <br>
+    <div style="margin-left: 600px;  margin-right: 600px;">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align:center; color:white;">Score</th>
+                    <th scope="col" style="text-align:center; color:white;">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">8</th>
+                    <td style="text-align:center; color:white;">0</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">9</th>
+                    <td style="text-align:center; color:white;">1</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">10</th>
+                    <td style="text-align:center; color:white;">2</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">11</th>
+                    <td style="text-align:center; color:white;">3</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">12</th>
+                    <td style="text-align:center; color:white;">4</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">13</th>
+                    <td style="text-align:center; color:white;">5</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">14</th>
+                    <td style="text-align:center; color:white;">7</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">15</th>
+                    <td style="text-align:center; color:white;">9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h4 style="margin-left: 200px;  font-weight: bold;">=>Ability Scores and Modifiers:</h4>
+    <br>
+    <div style="margin-left: 600px;  margin-right: 600px;">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align:center; color:white;">Score</th>
+                    <th scope="col" style="text-align:center; color:white;">Modifier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">1</th>
+                    <td style="text-align:center; color:white;">-5</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">2-3</th>
+                    <td style="text-align:center; color:white;">-4</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">4-5</th>
+                    <td style="text-align:center; color:white;">-3</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">6-7</th>
+                    <td style="text-align:center; color:white;">-2</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">8-9</th>
+                    <td style="text-align:center; color:white;">-1</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">10-11</th>
+                    <td style="text-align:center; color:white;">0</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">12-13</th>
+                    <td style="text-align:center; color:white;">+1</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">14-15</th>
+                    <td style="text-align:center; color:white;">+2</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">16-17</th>
+                    <td style="text-align:center; color:white;">+3</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">18-19</th>
+                    <td style="text-align:center; color:white;">+4</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">20-21</th>
+                    <td style="text-align:center; color:white;">+5</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">22-23</th>
+                    <td style="text-align:center; color:white;">+6</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">24-25</th>
+                    <td style="text-align:center; color:white;">+7</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">26-27</th>
+                    <td style="text-align:center; color:white;">+8</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">28-29</th>
+                    <td style="text-align:center; color:white;">+9</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align:center; color:white;">30</th>
+                    <td style="text-align:center; color:white;">+10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <h3 style="margin-left: 200px;  font-weight: bold;">4-Describe Your Character</h3>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Once you know the basic game aspects of your character, it’s time to flesh him or her out as a person. Your
+        character needs a name. Spend a few minutes thinking about what he or she looks like and how he or she behaves
+        in general terms.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Using the information in the Personality and Background section, you can flesh out your character’s physical
+        appearance and personality traits. Choose your character’s alignment (the moral compass that guides his or her
+        decisions) and ideals. The Personality and Background section also helps you identify the things your character
+        holds most dear, called bonds, and the flaws that could one day undermine him or her.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Your character’s background describes where he or she came from, his or her original occupation, and the
+        character’s place in the D&D world. Your DM might offer additional backgrounds beyond the ones included in the
+        Personality and Background section, and might be willing to work with you to craft a background that’s a more
+        precise fit for your character concept.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        A background gives your character a background feature (a general benefit) and proficiency in two skills, and it
+        might also give you additional languages or proficiency with certain kinds of tools. Record this information,
+        along with the personality information you develop, on your character sheet.
+    </h5>
+    <br>
+    <h4 style="margin-left: 200px;  font-weight: bold;">Your Character's Abilities</h4>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Take your character’s ability scores and race into account as you flesh out his or her appearance and
+        personality. A very strong character with low Intelligence might think and behave very differently from a very
+        smart character with low Strength.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        For example, high Strength usually corresponds with a burly or athletic body, while a character with low
+        Strength might be scrawny or plump.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        A character with high Dexterity is probably lithe and slim, while a character with low Dexterity might be either
+        gangly and awkward or heavy and thick-fingered.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        A character with high Constitution usually looks healthy, with bright eyes and abundant energy. A character with
+        low Constitution might be sickly or frail.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        A character with high Intelligence might be highly inquisitive and studious, while a character with low
+        Intelligence might speak simply or easily forget details.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        A character with high Wisdom has good judgment, empathy, and a general awareness of what’s going on. A character
+        with low Wisdom might be absent-minded, foolhardy, or oblivious.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        A character with high Charisma exudes confidence, which is usually mixed with a graceful or intimidating
+        presence. A character with a low Charisma might come across as abrasive, inarticulate, or timid.
+    </h5>
+    <br>
+    <h3 style="margin-left: 200px;  font-weight: bold;">5-Choose Equipment</h3>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Your class and background determine your character’s starting equipment, including weapons, armor, and other
+        adventuring gear. Record this equipment on your character sheet. All such items are detailed in the Equipment
+        section.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Instead of taking the gear given to you by your class and background, you can purchase your starting equipment.
+        You have a number of gold pieces (gp) to spend based on your class, as shown in the Equipment section. Extensive
+        lists of equipment, with prices, also appear in that section. If you wish, you can also have one trinket at no
+        cost.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Your Strength score limits the amount of gear you can carry. Try not to purchase equipment with a total weight
+        (in pounds) exceeding your Strength score times 15. "Using Ability Scores" has more information on carrying
+        capacity.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Once you know the basic game aspects of your character, it’s time to flesh him or her out as a person. Your
+        character needs a name. Spend a few minutes thinking about what he or she looks like and how he or she behaves
+        in general terms.
+    </h5>
+    <br>
+    <h4 style="margin-left: 200px;  font-weight: bold;">Armor Class</h4>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Your Armor Class (AC) represents how well your character avoids being wounded in battle. Things that contribute
+        to your AC include the armor you wear, the shield you carry, and your Dexterity modifier. Not all characters
+        wear armor or carry shields, however.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Without armor or a shield, your character’s AC equals 10 + his or her Dexterity modifier. If your character
+        wears armor, carries a shield, or both, calculate your AC using the rules in the Equipment section. Record your
+        AC on your character sheet.
+    </h5>
+    <br>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Your character needs to be proficient with armor and shields to wear and use them effectively, and your armor
+        and shield proficiencies are determined by your class. There are drawbacks to wearing armor or carrying a shield
+        if you lack the required proficiency, as explained in the Equipment section.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Some spells and class features give you a different way to calculate your AC. If you have multiple features that
+        give you different ways to calculate your AC, you choose which one to use
+    </h5>
+    <br>
+    <h4 style="margin-left: 200px;  font-weight: bold;">Weapons</h4>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        For each weapon your character wields, calculate the modifier you use when you attack with the weapon and the
+        damage you deal when you hit.
+    </h5>
+    <br>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        When you make an attack with a weapon, you roll a d20 and add your proficiency bonus (but only if you are
+        proficient with the weapon) and the appropriate ability modifier.
+    </h5>
+    <br>
+    <ul>
+        <div style="padding-left: 250px; padding-right: 200px;">
+            <li>
+                <h5 style="margin-right: 200px;">
+                    For attacks with melee weapons, use your Strength modifier for attack and damage rolls. A weapon
+                    that
+                    has
+                    the finesse property, such as a rapier, can use your Dexterity modifier instead.
+                </h5>
+            </li>
+            <br>
+            <li>
+                <h5 style="margin-right: 200px;">
+                    For attacks with ranged weapons, use your Dexterity modifier for attack and damage rolls. A melee
+                    weapon
+                    that has the thrown property, such as a handaxe, can use your Strength modifier instead.
+                </h5>
+            </li>
+        </div>
+    </ul>
+    <br>
+    <h3 style="margin-left: 200px;  font-weight: bold;">6. Come Together</h3>
+    <div style="width: 1500px;" class="horizontal-line-basic"></div>
+    <h5 style="margin-left: 200px; margin-right: 200px;">
+        Most D&D characters don’t work alone. Each character plays a role within a party, a group of adventurers working
+        together for a common purpose. Teamwork and cooperation greatly improve your party’s chances to survive the many
+        perils in the worlds of Dungeons & Dragons. Talk to your fellow players and your DM to decide whether your
+        characters know one another, how they met, and what sorts of quests the group might undertake.
+    </h5>
+    <br>
+    <br>
+    </div>
+</body>
+</html>
