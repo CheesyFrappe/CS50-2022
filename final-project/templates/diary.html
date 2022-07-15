@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Diary
+{% endblock %}
+
+{% block main %}
+
+    <main class="container py-5 text-center">
+        <h3 align="left">Diary:</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Title</th>
+                    <th class="text-end">Genre</th>
+                    <th class="text-end">Year</th>
+                    <th class="text-end">Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in list %}
+                <tr>
+                    <td class="text-start">{{ row.title }}</td>
+                    <td class="text-end">{{ row.genre }}</td>
+                    <td class="text-end">{{ row.year }}</td>
+                    <td class="text-end">{{ row.rating }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search
+{% endblock %}
+
+{% block main %}
+<form action="/" method="post">
+  <div class="mb-3">
+    <img alt="MovieBox Logo" src="static/moviebox_logo.png" align="center" width="275px" height="275px">
+    <h3>Let's Add a Movie</h3>
+    <br>
+    <div class="mb-3">
+      <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="movie" name="movie" placeholder="Movie Title" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+
+</form>
+{% endblock %}

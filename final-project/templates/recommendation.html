@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recommendation
+{% endblock %}
+
+{% block main %}
+<form action="recommendation" method="post">
+
+    <main class="container py-5 text-center">
+        <h3 align="center">Here are some movies you should watch!</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Title</th>
+                    <th class="text-end">IMDb Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in database %}
+                <tr>
+                    <td class="text-start">{{ row.title }}</td>
+                    <td class="text-end">{{ row.rating }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button class="btn btn-primary" type="submit">Add My Watchlist</button>
+    </main>
+</form>
+{% endblock %}

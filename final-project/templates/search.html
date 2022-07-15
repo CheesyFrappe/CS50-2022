@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+
+<form action="/search" method="post">
+    <div class="mb-3">
+        <select class="form-select mx-auto w-auto" name="movie_select">
+            <option disabled="" selected="">Results</option>
+            {% for row in movies %}
+                <option name = "{{row.movieID}}">{{row.title}} ({{row.year}})</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button class="btn btn-primary" name="action" value="watchlist" type="submit">Add Watchlist</button>
+    <button class="btn btn-primary" name="action" value="diary" type="submit">Add Diary</button>
+</form>
+
+{% endblock %}

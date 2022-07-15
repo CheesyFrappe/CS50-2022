@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Rate
+{% endblock %}
+
+{% block main %}
+        <form action="/rate" method="post">
+            <div class="mb-3">
+                <h3>Rate the Movies You've Watched</h3>
+                <br>
+                <select class="form-select mx-auto w-auto" name="movie">
+                    <option disabled="" selected="">My Movies</option>
+                    {% for row in list %}
+                        <option name = "{{row.movieID}}">{{row.title}} ({{row.year}})</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" class="form-control mx-auto w-auto" min="1" max ="10" name="score" placeholder="Score" type="number">
+            </div>
+            <button class="btn btn-primary" type="submit">Rate</button>
+        </form>
+{% endblock %}
