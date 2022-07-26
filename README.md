@@ -3,14 +3,14 @@ This repository contains all the tasks I've completed for the [CS50x](https://cs
 
 Here are the fundamentals that have been taught by the course:
 <!-- posts -->
-** Functions, Variables
-** Conditionals
-** Loops
-** Exceptions
-** Libraries
-** Unit Tests
-** File I/O
-** Regular Expressions
-** Object Oriented Programming
+* Functions, Variables
+* Conditionals
+* Loops
+* Exceptions
+* Libraries
+* Unit Tests
+* File I/O
+* Regular Expressions
+* Object Oriented Programming
 <!-- /posts -->
 
